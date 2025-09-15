@@ -1,0 +1,2 @@
+curl --location 'https://<your-instance>/services/data/vXX.X/query/?q=SELECT+Id%2CName%2CCompany%2CIndustry%2CEmail%2CPhone%2CStreet%2CCity%2CState%2CPostalCode%2CCountry%2CStatus%2CLeadSource%2CCreatedDate%2COwner.Name%2COwner.Email%2CLastActivityDate%2C(SELECT+Id%2CSubject%2CActivityDate%2CStatus%2CTaskSubtype%2CCallType%2CDescription%2COwner.Name+FROM+Tasks)%2C(SELECT+Id%2CSubject%2CStartDateTime%2CEndDateTime%2CLocation%2CDescription%2COwner.Name+FROM+Events)+FROM+Lead+WHERE+Id%3D%27{{lead_data}}%27+LIMIT+50' \
+--header 'Authorization: Bearer <your-access_token>'
